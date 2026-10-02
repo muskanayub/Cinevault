@@ -5,7 +5,7 @@ import shawshankHero from "../assets/movies/backdrops/shawshank-hero.jpg";
 import {
   getPopularMovies,
   getTrendingMovies,
-} from "../services/movieapi";
+} from "../services/movieApi";
 
 function Home() {
   const [trendingMovies, setTrendingMovies] = useState([]);

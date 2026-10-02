@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import {
   getMovieDetails,
   addToWatchlist,
-} from "../services/movieapi";
+} from "../services/movieApi";
 
 function MovieDetails() {
   const { id } = useParams();

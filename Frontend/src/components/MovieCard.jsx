@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { addToWatchlist } from "../services/movieapi";
+import { addToWatchlist } from "../services/movieApi";
 import { movieImages } from "../data/movieImages";
 
 function MovieCard({ movie }) {

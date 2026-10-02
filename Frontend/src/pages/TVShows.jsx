@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import MovieCard from "../components/MovieCard";
-import { getTVShows } from "../services/movieapi";
+import { getTVShows } from "../services/movieApi";
 
 function TVShows() {
   const [shows, setShows] = useState([]);

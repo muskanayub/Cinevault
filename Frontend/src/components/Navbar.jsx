@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { searchMovies } from "../services/movieapi";
+import { searchMovies } from "../services/movieApi";
 
 function Navbar() {
   const navigate = useNavigate();
