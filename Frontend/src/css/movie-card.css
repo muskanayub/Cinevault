@@ -1,0 +1,151 @@
+.cv-movie-card {
+  min-width: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.cv-movie-card:hover {
+  transform: translateY(-8px);
+}
+
+.cv-poster-wrapper {
+  position: relative;
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  border-radius: 9px;
+  background: #151515;
+}
+
+.cv-poster {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.cv-movie-card:hover .cv-poster {
+  transform: scale(1.06);
+}
+
+.cv-card-gradient {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.8),
+    transparent 45%
+  );
+
+  pointer-events: none;
+}
+
+.cv-rating {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+
+  padding: 5px 8px;
+  border-radius: 5px;
+
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.cv-add-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  width: 34px;
+  height: 34px;
+
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  background: rgba(0, 0, 0, 0.65);
+  color: white;
+
+  font-size: 22px;
+  line-height: 1;
+
+  cursor: pointer;
+  z-index: 5;
+
+  backdrop-filter: blur(8px);
+
+  transition: 0.25s ease;
+}
+
+.cv-add-btn:hover {
+  background: white;
+  color: black;
+  transform: scale(1.1);
+}
+
+.cv-add-btn.added {
+  background: #e50914;
+  border-color: #e50914;
+}
+
+.cv-card-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.25);
+
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.cv-movie-card:hover .cv-card-overlay {
+  opacity: 1;
+}
+
+.cv-play-btn {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+  border: none;
+
+  background: white;
+  color: black;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.cv-card-info {
+  padding: 12px 2px;
+}
+
+.cv-card-info h3 {
+  font-size: 15px;
+  font-weight: 600;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  margin: 0 0 6px;
+}
+
+.cv-card-meta {
+  display: flex;
+  gap: 7px;
+
+  color: #777;
+  font-size: 12px;
+}

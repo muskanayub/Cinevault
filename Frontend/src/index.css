@@ -1,0 +1,310 @@
+@import "./css/navbar.css";
+@import "./css/home.css";
+@import "./css/movie-card.css";
+@import "./css/footer.css";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background: #050505;
+  color: #fff;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+button {
+  transition: 0.2s ease;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: #e50914;
+  color: white;
+}
+
+.cv-loading {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #050505;
+}
+
+.cv-loader {
+  width: 38px;
+  height: 38px;
+
+  border: 3px solid #292929;
+  border-top-color: #e50914;
+
+  border-radius: 50%;
+
+  animation: cv-spin 0.8s linear infinite;
+
+  margin-bottom: 18px;
+}
+
+.cv-loading p {
+  color: #777;
+  font-size: 13px;
+}
+
+@keyframes cv-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* =========================
+   AUTH PAGE
+========================= */
+
+.cv-auth-page {
+  min-height: calc(100vh - 70px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 50px 20px;
+
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(229, 9, 20, 0.08),
+      transparent 35%
+    ),
+    #050505;
+}
+
+.cv-auth-card {
+  width: 100%;
+  max-width: 440px;
+
+  padding: 42px;
+
+  background: rgba(20, 20, 20, 0.92);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 25px 80px rgba(0, 0, 0, 0.55);
+}
+.cv-auth-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-bottom: 32px;
+
+  font-size: 25px;
+  font-weight: 800;
+
+  color: #ffffff;
+}
+
+.cv-auth-logo span:last-child span {
+  color: #e50914;
+}
+
+.cv-auth-logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  border-radius: 9px;
+
+  background: #e50914;
+
+  color: white;
+
+  font-size: 17px;
+}
+
+.cv-auth-card h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 32px;
+  font-weight: 700;
+
+  text-align: center;
+}
+
+.cv-auth-subtitle {
+  margin: 10px 0 30px;
+
+  color: #888;
+
+  text-align: center;
+
+  font-size: 14px;
+}
+
+.cv-form-group {
+  margin-bottom: 20px;
+}
+
+.cv-form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #dddddd;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.cv-form-group input {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 14px 15px;
+
+  border-radius: 8px;
+  border: 1px solid #303030;
+
+  background: #111111;
+  color: #ffffff;
+
+  font-size: 14px;
+  outline: none;
+}
+
+.cv-form-group input::placeholder {
+  color: #666;
+}
+
+.cv-form-group input:focus {
+  border-color: #e50914;
+
+  box-shadow:
+    0 0 0 3px rgba(229, 9, 20, 0.1);
+}
+
+.cv-auth-submit {
+  width: 100%;
+
+  padding: 14px;
+
+  margin-top: 8px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #e50914;
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.cv-auth-submit:hover {
+  background: #f6121d;
+
+  transform: translateY(-1px);
+}
+
+.cv-auth-submit:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+.cv-auth-error {
+  padding: 12px 14px;
+
+  margin-bottom: 20px;
+
+  border-radius: 7px;
+
+  background: rgba(229, 9, 20, 0.1);
+
+  border: 1px solid rgba(229, 9, 20, 0.3);
+
+  color: #ff6b6b;
+
+  font-size: 13px;
+}
+
+.cv-auth-footer {
+  margin-top: 28px;
+
+  color: #777;
+
+  text-align: center;
+
+  font-size: 14px;
+}
+
+.cv-auth-footer a {
+  color: #e50914;
+
+  text-decoration: none;
+
+  font-weight: 600;
+}
+
+.cv-auth-footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 500px) {
+  .cv-auth-page {
+    padding: 30px 16px;
+  }
+
+  .cv-auth-card {
+    padding: 30px 22px;
+  }
+
+  .cv-auth-card h1 {
+    font-size: 28px;
+  }
+}
